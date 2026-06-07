@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 
 // Serve index.html for all other routes (SPA fallback) - MUST BE LAST
-app.get('*', (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
