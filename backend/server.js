@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   res.send('Ikonex Academy Systems Core API Execution Matrix Online.');
 });
 
-// Serve index.html for all other routes (SPA fallback)
+// Serve index.html for all other routes (SPA fallback) - MUST BE LAST
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
