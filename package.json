@@ -1,0 +1,21 @@
+{
+  "name": "ikonex-student-management",
+  "version": "1.0.0",
+  "description": "Ikonex Academy Student Management System",
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "node backend/server.js",
+    "frontend": "cd frontend && npm run dev",
+    "start": "node backend/server.js",
+    "build": "cd frontend && npm run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.21.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
